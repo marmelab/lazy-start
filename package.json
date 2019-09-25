@@ -1,0 +1,12 @@
+{
+  "name": "lazy-start",
+  "version": "0.1.2",
+  "description": "Lazily start a web server the first time it is requested",
+  "bin": {
+    "lazy-start": "./bin/lazy-start.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
