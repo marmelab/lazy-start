@@ -14,12 +14,25 @@ yarn add -D lazy-start
 
 ## Usage
 
-```bash
-lazy-start yarn start
-lazy-start -p 3000 react-scripts start
-NODE_ENV=test lazy-start -t 120 cpu-intensive.sh
-lazy-start -t $(shuf -i 60-300 -n 1) run-in-random-between-1-and-5-minutes.py
-DISABLE_LAZY_START=true lazy-start run-immediate
+```
+NAME
+    lazy-start - Lazily start a web server the first time it is requested
+
+SYNOPSIS
+    lazy-start [<options>] <command>
+
+OPTIONS
+    -p, --port      Port to listen (default: 80)
+    -d, --detached  Run the command in detached mode (default: false)
+    -r, --refresh   Time in seconds before page refresh (default: 10)
+    -t, --timeout   Run the command anyway after defined timeout in seconds (default: false)
+
+EXAMPLES
+    lazy-start yarn start
+    lazy-start -p 3000 react-scripts start
+    NODE_ENV=test lazy-start -t 120 cpu-intensive.sh
+    lazy-start -t $(shuf -i 60-300 -n 1) run-in-random-between-1-and-5-minutes.py
+    DISABLE_LAZY_START=true lazy-start run-immediate
 ```
 
 
